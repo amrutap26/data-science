@@ -37,4 +37,57 @@ public class ChaidAnalysisRequest {
     private Integer level;
     private Integer size;
     private List<Bucket> buckets;
+	public String getFieldName() {
+		return fieldName;
+	}
+	public void setFieldName(String fieldName) {
+		this.fieldName = fieldName;
+	}
+	public String getFieldType() {
+		return fieldType;
+	}
+	public void setFieldType(String fieldType) {
+		this.fieldType = fieldType;
+	}
+	public Integer getLevel() {
+		return level;
+	}
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+	public Integer getSize() {
+		return size;
+	}
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+	public List<Bucket> getBuckets() {
+		return buckets;
+	}
+	public void setBuckets(List<Bucket> buckets) {
+		this.buckets = buckets;
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ChaidAnalysisRequest [fieldName=");
+		builder.append(fieldName);
+		builder.append(", fieldType=");
+		builder.append(fieldType);
+		builder.append(", level=");
+		builder.append(level);
+		builder.append(", size=");
+		builder.append(size);
+		builder.append(", buckets=");
+		builder.append(buckets);
+		builder.append("]");
+		return builder.toString();
+	}
+    
+    
+    
+    
+    
+    
+    
 }

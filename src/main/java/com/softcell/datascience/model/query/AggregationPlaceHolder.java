@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
+/**
+ * Created by datalake on 2/1/18.
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,17 +14,14 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PlaceHolder {
+public class AggregationPlaceHolder {
+
     @JsonProperty("terms")
     private Term term;
     @JsonProperty("range")
     private RangeBucket range;
-    @JsonProperty("aggs")
-    private Aggregation aggregations;
     @JsonProperty("stats")
     private  Stats stats;
-
-    @JsonProperty("extended_stats")
-    private  ExtendedStats extended_stats;
-
+    @JsonProperty("aggs")
+    private Aggregation aggregations;
 }

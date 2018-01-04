@@ -22,4 +22,34 @@ public class Term {
 
     @JsonProperty("size")
     private Integer size;
+
+	public String getField() {
+		return field;
+	}
+
+	public void setField(String field) {
+		this.field = field;
+	}
+
+	public Integer getSize() {
+		return size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Term [field=");
+		builder.append(field);
+		builder.append(", size=");
+		builder.append(size);
+		builder.append("]");
+		return builder.toString();
+	}
+    
+    
+    
 }

@@ -3,6 +3,8 @@ package com.softcell.datascience.model.query;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.softcell.datascience.model.response.Status;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -21,5 +23,10 @@ public class Range {
     private Long from;
     @JsonProperty("to")
     private Long to;
+    
+    
+    
+
+    
 }
 

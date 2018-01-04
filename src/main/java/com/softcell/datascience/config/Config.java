@@ -8,20 +8,20 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class Config {
 
-    @Value("${elastic-cluster-name}")
+   // @Value("${elastic-cluster-name}")
     private String clusterName;
 
-    @Value("${elastic-nodes}")
+   // @Value("${elastic-nodes}")
     private String[] nodes;
 
-    @Value("${elastic-index-type}")
+  //  @Value("${elastic-index-type}")
     private String indexDoc;
 
-    public  ElasticSearchConfig elasticSearchConfig(){
-        return ElasticSearchConfig.builder()
-                .clusterName(clusterName)
-                .nodes(nodes)
-                .indexDoc(indexDoc)
-                .build();
-    }
+//    public  ElasticSearchConfig elasticSearchConfig(){
+//
+//        return ElasticSearchConfig.builder()
+//                .clusterName("elasticsearch")
+//                .nodes(getNodes()).indexDoc("elasticsearch/test")
+//                .build();
+//    }
 }

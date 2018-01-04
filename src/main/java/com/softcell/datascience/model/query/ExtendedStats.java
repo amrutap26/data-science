@@ -1,9 +1,12 @@
 package com.softcell.datascience.model.query;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
-import java.util.List;
+/**
+ * Created by datalake on 4/1/18.
+ */
 
 @Data
 @NoArgsConstructor
@@ -12,9 +15,9 @@ import java.util.List;
 @ToString
 @EqualsAndHashCode
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class RangeBucket {
-    private String field;
-    private Boolean keyed;
-    private List<Range> ranges;
+public class ExtendedStats {
 
+    @JsonProperty("field")
+    private String fieldName;
+    private String statsType;
 }

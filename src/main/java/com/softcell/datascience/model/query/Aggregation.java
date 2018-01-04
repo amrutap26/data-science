@@ -14,4 +14,5 @@ import lombok.*;
 public class Aggregation {
     @JsonProperty("placeHolder")
     private PlaceHolder placeHolder;
+
 }

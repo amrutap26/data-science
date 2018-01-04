@@ -37,6 +37,7 @@ public class QueryBuilder {
 
     public Query buildChaidQuery(List<ChaidAnalysisRequest> requestList) {
         Query query = new Query();
+
         query.setSize(0);
         int index = 0;
         for (ChaidAnalysisRequest chaidAnalysisRequest : requestList) {
@@ -290,4 +291,6 @@ public class QueryBuilder {
         }
         return map;
     }
+
+
 }

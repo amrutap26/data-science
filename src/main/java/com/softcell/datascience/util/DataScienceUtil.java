@@ -13,11 +13,23 @@ public class DataScienceUtil {
 
     @Autowired
     private Config config;
+    ElasticSearchConfig elasticSearchConfig=new ElasticSearchConfig();
 
     public String getUrl() {
-        ElasticSearchConfig elasticSearchConfig = config.elasticSearchConfig();
-        return StringUtils.join("http://", elasticSearchConfig.getNodes()[0], "/", elasticSearchConfig.getIndexDoc(), "/_search");
+      //  ElasticSearchConfig elasticSearchConfig = config.elasticSearchConfig();
+
+        elasticSearchConfig.setClusterName("elasticsearch");
+        elasticSearchConfig.setIndexDoc("elasticsearch/test");
+        elasticSearchConfig.setNodes("localhost:9200");
+
+        System.out.println("***************"+elasticSearchConfig.getClusterName());
+        return StringUtils.join("http://", elasticSearchConfig.getNodes(), "/", elasticSearchConfig.getIndexDoc(), "/_search");
     }
+
+//    public String getUrl1() {
+//        ElasticSearchConfig elasticSearchConfig = config.elasticSearchConfig();
+//        return StringUtils.join("http://", elasticSearchConfig.getNodes()[0], "/", elasticSearchConfig.getIndexDoc(), "/_search");
+//    }
 
     public String buildJsonString(Object o) throws JsonProcessingException {
         return new ObjectMapper().writeValueAsString(o);

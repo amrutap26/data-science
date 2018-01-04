@@ -1,5 +1,7 @@
 package com.softcell.datascience.config;
 
+import java.util.Arrays;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +13,10 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ElasticSearchConfig {
     private String clusterName;
-    private String[] nodes;
+    private String nodes;
     private String indexDoc;
+
+
+
+
 }

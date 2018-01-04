@@ -16,4 +16,30 @@ public class Query {
     private Integer size;
     @JsonProperty("aggs")
     private Aggregation aggregation;
+	public Integer getSize() {
+		return size;
+	}
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+	public Aggregation getAggregation() {
+		return aggregation;
+	}
+	public void setAggregation(Aggregation aggregation) {
+		this.aggregation = aggregation;
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Query [size=");
+		builder.append(size);
+		builder.append(", aggregation=");
+		builder.append(aggregation);
+		builder.append("]");
+		return builder.toString();
+	}
+
+    
+    
+    
 }
