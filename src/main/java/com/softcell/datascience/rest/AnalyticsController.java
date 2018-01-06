@@ -1,8 +1,10 @@
 package com.softcell.datascience.rest;
 
+import com.softcell.datascience.model.request.client.BaseRequest;
 import com.softcell.datascience.model.request.client.ChaidAnalysisRequest;
 import com.softcell.datascience.model.request.client.Request;
 import com.softcell.datascience.model.request.client.TermAnalysisRequest;
+import com.softcell.datascience.model.response.FieldsProperty;
 import com.softcell.datascience.service.AnalyticsManager;
 import com.softcell.datascience.service.FieldAnalysisManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,5 +62,19 @@ public class AnalyticsController {
         return new ResponseEntity<>(analyticsManager.doDynamicChaidAnalysis(query), HttpStatus.OK);
     }
     */
+
+
+    @PostMapping(value = FIELDS_PROPERTY)
+    public ResponseEntity<?> getFieldProperty(
+            @RequestBody Request<BaseRequest>request ) throws IOException {
+        return new ResponseEntity<>(fieldAnalysisManager.getFieldProperty(request), HttpStatus.OK);
+    }
+
+    @PostMapping(value = SAVE_FIELDS_PROPERTY)
+    public ResponseEntity<?> saveFieldProperty(
+            @RequestBody FieldsProperty request ) throws IOException {
+        return new ResponseEntity<>(fieldAnalysisManager.saveFieldProperty(request), HttpStatus.OK);
+    }
+
 
 }
