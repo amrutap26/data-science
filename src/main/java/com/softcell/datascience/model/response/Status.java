@@ -18,6 +18,7 @@ public class Status {
     @JsonProperty("sStatus")
     private String statusValue;
 
+
     /**
      * Builder.
      *

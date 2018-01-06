@@ -35,6 +35,7 @@ public class testFieldsPropertis {
         listelment2.setType("number");
         listelment2.setUrl("/termstats/");
         listelment2.setLevel(1);
+
         fieldDetails.add(listelment2);
 
         fieldsProperty.setFieldDetails(fieldDetails);

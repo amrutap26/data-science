@@ -38,6 +38,7 @@ public class TestTermAnalysis {
         System.out.println(objectMapper.writeValueAsString(termAnalysisRequestRequest));
 
 
+
     }
 
 }

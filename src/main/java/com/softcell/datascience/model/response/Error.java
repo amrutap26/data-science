@@ -138,6 +138,7 @@ public class Error {
      * @param errorCode the new error code
      */
     public void setErrorCode(String errorCode) {
+
         this.errorCode = errorCode;
     }
 
